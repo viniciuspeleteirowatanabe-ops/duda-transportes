@@ -54,7 +54,7 @@
                             <h4 class="mb-0 fw-bold" th:text="'R$ ' + ${#numbers.formatDecimal(faturamento, 1, 'POINT', 2, 'COMMA')}">R$ 0,00</h4>
                         </div>
                     </div>
-                    <button class="btn btn-sm btn-light mt-3 py-1" data-bs-toggle="modal" data-bs-target="#modalFaturamento"> Inserir Ganho</button>
+                    <button class="btn btn-sm btn-light mt-3 py-1" data-bs-toggle="modal" data-bs-target="#modalFaturamento">Inserir Ganho</button>
                 </div>
             </div>
 
@@ -123,7 +123,7 @@
                             
                             <div class="col-auto">
                                 <select name="tipo" class="form-select form-select-sm" onchange="this.form.submit()">
-                                    <option value="">-- Todos os Tipos --</option>
+                                    <option value=""> Todos os Tipos </option>
                                     <option value="NORMAL" th:selected="${tipoSelecionado == 'NORMAL'}">Gastos Normais</option>
                                     <option value="MULTA" th:selected="${tipoSelecionado == 'MULTA'}">Multas</option>
                                 </select>
@@ -131,7 +131,7 @@
 
                             <div class="col-auto">
                                 <select name="categoria" class="form-select form-select-sm" onchange="this.form.submit()">
-                                    <option value="">-- Todas as Categorias --</option>
+                                    <option value=""> Todas as Categorias </option>
                                     <option th:each="cat : ${categorias}" th:value="${cat}" th:text="${cat.nomeExibicao}" th:selected="${categoriaSelecionada == cat}"></option>
                                 </select>
                             </div>
