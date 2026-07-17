@@ -24,6 +24,7 @@ public class GastoController {
 
     // Enum com todas as categorias solicitadas pelos seus pais
     public enum Categoria {
+        MULTA("Multa"),
         ABASTECIMENTO("Abastecimento"),
         SALARIO("Salário"),
         AJUDA_DE_CUSTO("Ajuda de Custo"),
@@ -80,8 +81,7 @@ public class GastoController {
     public GastoController() {
         // Dados de exemplo para o sistema não iniciar vazio
         listaGastos.add(new Gasto("Diesel Caminhão Volvo", 1200.50, "NORMAL", Categoria.ABASTECIMENTO, LocalDate.now()));
-        listaGastos.add(new Gasto("Conserto de Embreagem", 850.00, "NORMAL", Categoria.MECANICO, LocalDate.now()));
-        listaGastos.add(new Gasto("Excesso de velocidade Rod. Dutra", 195.23, "MULTA", Categoria.OUTROS, LocalDate.now()));
+     
     }
 
     @GetMapping
